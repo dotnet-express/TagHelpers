@@ -1,0 +1,95 @@
+﻿@page
+@model EditorsModel
+@{
+    ViewData["Title"] = "Editors";
+}
+
+@section Styles {
+    <!-- bootstrap wysihtml5 - text editor
+    <link rel="stylesheet" href="~/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">-->
+}
+
+@section Scripts {
+
+    <!-- Bootstrap WYSIHTML5
+    <script src="~/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>-->
+    
+}
+
+<!-- Content Header (Page header) -->
+<content-header title="Text Editors" sub-title="Advanced form element">
+    <breadcrumb>
+        <breadcrumb-item label="Home" href="#" fa-icon="dashboard" />
+        <breadcrumb-item label="Forms" href="#" fa-icon="edit" />
+        <breadcrumb-item label="Editors" active />
+    </breadcrumb>
+</content-header>
+
+<!-- Main content -->
+<content>
+    <row>
+        <column size-md="12">
+            <box state="Info">
+                <box-header title="CK Editor" sub-title="Advanced and full of features" with-border="false">
+                    <box-title>
+                        CK Editor
+                        <small>Advanced and full of features</small>
+                    </box-title>
+                    <!-- tools box -->
+                    <box-tools>
+                        <btn-info type="button" size="Small" data-widget="collapse" data-toggle="tooltip" title="Collapse" fa-icon="minus" />
+                        <!-- This will cause the box to be removed when clicked -->
+                        <btn-info type="button" size="Small" data-widget="remove" data-toggle="tooltip" title="Remove" fa-icon="times" />
+                    </box-tools>
+                    <!-- /. tools -->
+                </box-header>
+                <!-- /.box-header -->
+                <box-body>
+                    <form>
+                        <textarea id="editor1" name="editor1" rows="10" cols="80">
+                            This is my textarea to be replaced with CKEditor.
+                        </textarea>
+                    </form>
+                </box-body>
+            </box>
+            <!-- /.box -->
+
+            <box>
+                <box-header>
+                    <box-title>
+                        Bootstrap WYSIHTML5
+                        <small>Simple and fast</small>
+                    </box-title>
+                    <!-- tools box -->
+                    <div class="pull-right box-tools">
+                        <btn-default type="button" size="Small" data-widget="collapse" data-toggle="tooltip" title="Collapse" fa-icon="minus" />
+                        <btn-default type="button" size="Small" data-widget="remove" data-toggle="tooltip" title="Remove" fa-icon="close" />
+                    </div>
+                    <!-- /. tools -->
+                </box-header>
+                <!-- /.box-header -->
+                <box-body>
+                    <form>
+                        <textarea class="textarea" placeholder="Place some text here"
+                                  style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    </form>
+                </box-body>
+            </box>
+        </column>
+        <!-- /.col-->
+    </row>
+    <!-- ./row -->
+</content>
+<!-- /.content -->
+
+<!-- CK Editor -->
+<script src="~/lib/ckeditor/ckeditor.js"></script>
+<script>
+    $(function () {
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace('editor1');
+        //bootstrap WYSIHTML5 - text editor
+        $('.textarea').wysihtml5();
+    });
+</script>

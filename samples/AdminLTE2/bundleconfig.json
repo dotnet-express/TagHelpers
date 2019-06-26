@@ -1,0 +1,193 @@
+﻿// Configure bundling and minification for the project.
+// More info at https://go.microsoft.com/fwlink/?LinkId=808241
+[
+  // ================================================================================
+  // Minification [site.css] to [site.min.css]
+  // ================================================================================
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/css/site.css"
+    ]
+  },
+
+
+  // ================================================================================
+  // Minification [site.js] to [site.min.js]
+  // ================================================================================
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  },
+
+
+  // ================================================================================
+  // Bundle [wwwroot/lib/**/*.css] to [vendors.css]
+  // ================================================================================
+  {
+    "outputFileName": "wwwroot/css/vendors.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      // JQuery, JQuery UI, Bootstrap
+      // - jquery has no default styles
+      "wwwroot/libs/jquery-ui/jquery-ui.css",
+      "wwwroot/libs/bootstrap/css/bootstrap.css",
+
+      // Icons styles
+      "wwwroot/libs/font-awesome/css/font-awesome.css",
+      "wwwroot/libs/ionicons/css/ionicons.css",
+
+      // Utils styles
+      // - jquery-slimscroll has no default styles
+      // - fastclick has no default styles
+      // - moment has no default styles
+      // - raphael has no default styles
+
+      // Libraries styles
+      "wwwroot/libs/bootstrap-colorpicker/css/bootstrap-colorpicker.css",
+      "wwwroot/libs/bootstrap-datepicker/css/bootstrap-datepicker.css",
+      "wwwroot/libs/bootstrap-daterangepicker/daterangepicker.css",
+      "wwwroot/libs/bootstrap-slider/css/bootstrap-slider.css",
+      "wwwroot/libs/bootstrap-timepicker/css/bootstrap-timepicker.css",
+      // - chart.js has no default styles
+      "wwwroot/libs/datatables/css/jquery.dataTables.css",
+      "wwwroot/libs/datatables/css/dataTables.bootstrap.css",
+      "wwwroot/libs/fullcalendar/fullcalendar.css",
+      "wwwroot/libs/icheck/skins/flat/_all.css",
+      "wwwroot/libs/icheck/skins/minimal/_all.css",
+      "wwwroot/libs/icheck/skins/square/_all.css",
+      "wwwroot/libs/ion-rangeslider/css/ion.rangeSlider.css",
+      // - inputmask has no default styles
+      // - jquery-sparklines has no default styles
+      // - jquery-validate has no default styles
+      // - jquery-validation-unobtrusive has no default styles
+      "wwwroot/libs/morris.js/morris.css",
+      "wwwroot/libs/pace/themes/white/pace-theme-minimal.css",
+      "wwwroot/libs/select2/css/select2.css",
+
+      // Flot Charts styles
+      // - flot has no dafault styles
+
+      // Plugins styles
+      // - jquery-knob has no default styles
+      "wwwroot/plugins/jvectormap/jquery-jvectormap-1.2.2.css",
+      "wwwroot/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css",
+
+      // AdminLTE styles
+      "wwwroot/libs/admin-lte/css/AdminLTE.css",
+      "wwwroot/libs/admin-lte/css/skins/_all-skins.css"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": false
+
+    }
+  },
+
+
+  // ================================================================================
+  // Minification [vendors.css] to [vendors.min.css]
+  // ================================================================================
+  {
+    "outputFileName": "wwwroot/css/vendors.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/css/vendors.css"
+    ]
+  },
+
+
+  // ================================================================================
+  // Bundle [wwwroot/lib/**/*.js] to [vendors.js]
+  // ================================================================================
+  {
+    "outputFileName": "wwwroot/js/vendors.js",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      // JQuery, JQuery UI, Bootstrap scripts
+      "wwwroot/libs/jquery/jquery.js",
+      "wwwroot/libs/jquery-ui/jquery-ui.js",
+      "wwwroot/libs/bootstrap/js/bootstrap.js",
+
+      // Icons scripts
+      // - font-awesome has no scripts
+      // - ionicons has no scripts
+
+      // Utils scripts
+      "wwwroot/libs/jquery-slimscroll/jquery.slimscroll.js",
+      "wwwroot/libs/fastclick/fastclick.js",
+      "wwwroot/libs/moment.js/moment.js",
+
+      // Libraries scripts
+      "wwwroot/libs/bootstrap-colorpicker/js/bootstrap-colorpicker.js",
+      "wwwroot/libs/bootstrap-datepicker/js/bootstrap-datepicker.js",
+      "wwwroot/libs/bootstrap-daterangepicker/daterangepicker.js",
+      "wwwroot/libs/bootstrap-slider/bootstrap-slider.js",
+      "wwwroot/libs/bootstrap-timepicker/js/bootstrap-timepicker.js",
+      "wwwroot/libs/chart.js/Chart.js",
+      //"wwwroot/libs/ckeditor/ckeditor.js",
+      "wwwroot/libs/datatables/js/jquery.dataTables.js",
+      "wwwroot/libs/datatables/js/dataTables.bootstrap.js",
+      "wwwroot/libs/fullcalendar/fullcalendar.js",
+      "wwwroot/libs/icheck/icheck.js",
+      "wwwroot/libs/ion-rangeslider/js/ion.rangeSlider.js",
+      "wwwroot/libs/inputmask/jquery.inputmask.bundle.min.js",
+      "wwwroot/libs/jquery-sparklines/jquery.sparkline.js",
+      "wwwroot/libs/jquery-validate/jquery.validate.js",
+      "wwwroot/libs/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "wwwroot/libs/raphael/raphael.js",
+      "wwwroot/libs/morris.js/morris.js",
+      "wwwroot/libs/pace/pace.js",
+      "wwwroot/libs/select2/js/select2.js",
+
+      // Flot Charts scripts
+      "wwwroot/libs/flot/jquery.flot.js",
+      "wwwroot/libs/flot/jquery.flot.resize.js",
+      "wwwroot/libs/flot/jquery.flot.pie.js",
+      "wwwroot/libs/flot/jquery.flot.categories.js",
+
+      // Plugins scripts
+      "wwwroot/plugins/jquery-knob/jquery.knob.js",
+      "wwwroot/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
+      "wwwroot/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
+      "wwwroot/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js",
+
+      // AdminLTE scripts
+      "wwwroot/libs/admin-lte/js/adminlte.js",
+      "wwwroot/libs/admin-lte/js/demo.js"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": false
+    }
+  },
+
+
+  // ================================================================================
+  // Minification [vendors.js] to [vendors.min.js]
+  // ================================================================================
+  {
+    "outputFileName": "wwwroot/js/vendors.min.js",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/js/vendors.js"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  }
+]

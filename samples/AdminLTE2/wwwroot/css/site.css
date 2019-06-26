@@ -1,0 +1,12 @@
+/*!
+ * Application Styles. 
+ */
+@media print {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.validation-summary-valid span {
+    display: none;
+}

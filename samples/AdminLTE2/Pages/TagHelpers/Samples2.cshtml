@@ -1,0 +1,41 @@
+﻿@page
+@{
+    ViewData["Title"] = "Bootstrap 3 - Samples 2";
+}
+
+<!-- Content Header (Page header) -->
+<content-header title="Bootstrap 3" sub-title="TagHelpers">
+    <breadcrumb>
+        <breadcrumb-item label="Home" href="~/" fa-icon="dashboard" />
+        <breadcrumb-item label="TagHelpers" href="~/TagHelpers" fa-icon="edit" />
+        <breadcrumb-item label="Samples 2" active="true" />
+    </breadcrumb>
+</content-header>
+
+<!-- Main content -->
+<content>
+    <row>
+        <column size-md="8" offset-md="2">
+            <panel>
+                <panel-heading title="Responsive embed 16x9"></panel-heading>
+                <panel-body>
+                    <embed-responsive ratio="Ratio16by9">
+                        <iframe src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+                    </embed-responsive>
+                </panel-body>
+            </panel>
+
+            <panel>
+                <panel-heading title="Responsive embed 4x3"></panel-heading>
+                <panel-body>
+                    <embed-responsive ratio="Ratio4by3">
+                        <iframe src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+                    </embed-responsive>
+
+                </panel-body>
+            </panel>
+
+        </column>
+
+    </row>
+</content>

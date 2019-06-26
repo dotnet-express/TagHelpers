@@ -1,0 +1,49 @@
+﻿<script src="~/libs/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/libs/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    $.validator.setDefaults({
+        highlight: function (element) {
+            $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function (element) {
+            $(element).closest('.form-group').removeClass('has-error');
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function (error, element) {
+            if (element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        showErrors: function (map, errors) {
+            this.defaultShowErrors();
+            if ($('div[data-valmsg-summary=true] li:visible').length) {
+                this.checkForm();
+                if (this.errorList.length)
+                    $(this.currentForm).triggerHandler("invalid-form", [this]);
+                else
+                    $(this.currentForm).resetSummary();
+            }
+        }
+    });
+
+    jQuery.fn.resetSummary = function () {
+        var form = this.is('form') ? this : this.closest('form');
+        form.find("[data-valmsg-summary=true]")
+            .removeClass("validation-summary-errors")
+            .addClass("validation-summary-valid")
+            .find("ul")
+            .empty();
+        return this;
+    };
+
+    $("input[type=file]").each(function () {
+        $(this).bind("change", function () {
+            $(this).blur().focus();
+        });
+    });
+
+</script>

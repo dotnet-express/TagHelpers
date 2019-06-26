@@ -1,0 +1,81 @@
+﻿@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment HostingEnvironment
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 - @ViewData["Title"]</title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <bundle name="wwwroot/css/vendors.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="false" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+    @RenderSection("Styles", required: false)
+</head>
+<body skin="Blue">
+
+    <wrapper>
+        <partial name="_Header" />
+
+        <!-- =============================================== -->
+        <!-- Left side column. contains the sidebar -->
+        @await Html.PartialAsync("_NavBar")
+
+        <!-- =============================================== -->
+        <!-- Content Wrapper. Contains page content -->
+        <content-wrapper>
+            @await Html.PartialAsync("_StatusMessage", TempData["StatusMessage"])
+
+            <div id="pjax-container">
+                @RenderBody()
+            </div>
+        </content-wrapper>
+        <!-- /.content-wrapper -->
+        <!-- =============================================== -->
+        <!-- Page footer. -->
+        @await Html.PartialAsync("_Footer")
+
+        <!-- =============================================== -->
+        <!-- Control Sidebar -->
+        @await Html.PartialAsync("_SideBar")
+    </wrapper>
+    <!-- ./wrapper -->
+
+    <bundle name="wwwroot/js/vendors.js" />
+
+    <environment include="Development">
+        <script src="~/js/site.js" asp-append-version="false"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    <script>
+        $(document).ready(function () {
+            //$('.sidebar-menu').tree();
+        });
+    </script>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

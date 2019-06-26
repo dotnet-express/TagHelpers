@@ -1,0 +1,155 @@
+﻿@page
+@{
+    ViewData["Title"] = "Bootstrap 3 - Samples 3";
+}
+
+<!-- Content Header (Page header) -->
+<content-header title="Bootstrap 3" sub-title="TagHelpers">
+    <breadcrumb>
+        <breadcrumb-item label="Home" href="~/" fa-icon="dashboard" />
+        <breadcrumb-item label="TagHelpers" href="~/TagHelpers" fa-icon="edit" />
+        <breadcrumb-item label="Samples 3" active="true" />
+    </breadcrumb>
+</content-header>
+
+<!-- Main content -->
+<content>
+    <row>
+        <column size-md="2">
+            <text-muted>Muted</text-muted>
+            <text-primary>Primary</text-primary>
+            <text-success>Success</text-success>
+            <text-info>Info</text-info>
+            <text-warning>Warning</text-warning>
+            <text-danger>Danger</text-danger>
+        </column>
+
+        <column size-md="2">
+            <p text-color="Muted">Muted</p>
+            <p text-color="Primary">Primary</p>
+            <p text-color="Success">Success</p>
+            <p text-color="Info">Info</p>
+            <p text-color="Warning">Warning</p>
+            <p text-color="Danger">Danger</p>
+        </column>
+
+        <column size-md="2">
+            <p text-color="@TextColor.Muted">Muted</p>
+            <p text-color="@TextColor.Primary">Primary</p>
+            <p text-color="@TextColor.Success">Success</p>
+            <p text-color="@TextColor.Info">Info</p>
+            <p text-color="@TextColor.Warning">Warning</p>
+            <p text-color="@TextColor.Danger">Danger</p>
+        </column>
+
+        <column size-md="2">
+            <p text-color="muted">Muted</p>
+            <p text-color="primary">Primary</p>
+            <p text-color="success">Success</p>
+            <p text-color="info">Info</p>
+            <p text-color="warning">Warning</p>
+            <p text-color="danger">Danger</p>
+        </column>
+
+        <column size-md="2">
+            <p text-color="Aqua">Aqua</p>
+            <p text-color="Black">Black</p>
+            <p text-color="Blue">Blue</p>
+            <p text-color="Fuchsia">Fuchsia</p>
+            <p text-color="Gray">Gray</p>
+            <p text-color="Green">Green</p>
+            <p text-color="LightBlue">LightBlue</p>
+            <p text-color="Lime">Lime</p>
+            <p text-color="Maroon">Maroon</p>
+            <p text-color="Navy">Navy</p>
+            <p text-color="Olive">Olive</p>
+            <p text-color="Orange">Orange</p>
+            <p text-color="Purple">Purple</p>
+            <p text-color="Red">Red</p>
+            <p text-color="Teal">Teal</p>
+            <p text-color="Yellow">Yellow</p>
+        </column>
+    </row>
+    <row>
+        <column size-md="2">
+            <div bg-color="Primary">Primary</div>
+            <div bg-color="Success">Success</div>
+            <div bg-color="Info">Info</div>
+            <div bg-color="Warning">Warning</div>
+            <div bg-color="Danger">Danger</div>
+        </column>
+
+        <column size-md="2">
+            <div bg-color="@BackgroundColor.Primary">Primary</div>
+            <div bg-color="@BackgroundColor.Success">Success</div>
+            <div bg-color="@BackgroundColor.Info">Info</div>
+            <div bg-color="@BackgroundColor.Warning">Warning</div>
+            <div bg-color="@BackgroundColor.Danger">Danger</div>
+        </column>
+
+        <column size-md="2">
+            <div background-color-bs3="Primary">Primary</div>
+            <div background-color-bs3="Success">Success</div>
+            <div background-color-bs3="Info">Info</div>
+            <div background-color-bs3="Warning">Warning</div>
+            <div background-color-bs3="Danger">Danger</div>
+        </column>
+
+        <column size-md="2">
+            <p background-color-lte2="Aqua">Aqua</p>
+            <p background-color-lte2="Black">Black</p>
+            <p background-color-lte2="Blue">Blue</p>
+            <p background-color-lte2="Fuchsia">Fuchsia</p>
+            <p background-color-lte2="Gray">Gray</p>
+            <p background-color-lte2="Green">Green</p>
+            <p background-color-lte2="LightBlue">LightBlue</p>
+            <p background-color-lte2="Lime">Lime</p>
+            <p background-color-lte2="Maroon">Maroon</p>
+            <p background-color-lte2="Navy">Navy</p>
+            <p background-color-lte2="Olive">Olive</p>
+            <p background-color-lte2="Orange">Orange</p>
+            <p background-color-lte2="Purple">Purple</p>
+            <p background-color-lte2="Red">Red</p>
+            <p background-color-lte2="Teal">Teal</p>
+            <p background-color-lte2="Yellow">Yellow</p>
+        </column>
+
+        <column size-md="2">
+            <p background-color-lte2="AquaActive">Aqua</p>
+            <p background-color-lte2="BlackActive">Black</p>
+            <p background-color-lte2="BlueActive">Blue</p>
+            <p background-color-lte2="FuchsiaActive">Fuchsia</p>
+            <p background-color-lte2="GrayActive">Gray</p>
+            <p background-color-lte2="GreenActive">Green</p>
+            <p background-color-lte2="LightBlueActive">LightBlue</p>
+            <p background-color-lte2="LimeActive">Lime</p>
+            <p background-color-lte2="MaroonActive">Maroon</p>
+            <p background-color-lte2="NavyActive">Navy</p>
+            <p background-color-lte2="OliveActive">Olive</p>
+            <p background-color-lte2="OrangeActive">Orange</p>
+            <p background-color-lte2="PurpleActive">Purple</p>
+            <p background-color-lte2="RedActive">Red</p>
+            <p background-color-lte2="TealActive">Teal</p>
+            <p background-color-lte2="YellowActive">Yellow</p>
+        </column>
+
+        <column size-md="2">
+            <p background-color-lte2="AquaGradient">Aqua</p>
+            <p background-color-lte2="BlackGradient">Black</p>
+            <p background-color-lte2="BlueGradient">Blue</p>
+            <p background-color-lte2="FuchsiaGradient">Fuchsia</p>
+            <p background-color-lte2="GrayGradient">Gray</p>
+            <p background-color-lte2="GreenGradient">Green</p>
+            <p background-color-lte2="LightBlueGradient">LightBlue</p>
+            <p background-color-lte2="LimeGradient">Lime</p>
+            <p background-color-lte2="MaroonGradient">Maroon</p>
+            <p background-color-lte2="NavyGradient">Navy</p>
+            <p background-color-lte2="OliveGradient">Olive</p>
+            <p background-color-lte2="OrangeGradient">Orange</p>
+            <p background-color-lte2="PurpleGradient">Purple</p>
+            <p background-color-lte2="RedGradient">Red</p>
+            <p background-color-lte2="TealGradient">Teal</p>
+            <p background-color-lte2="YellowGradient">Yellow</p>
+        </column>
+    </row>
+</content>

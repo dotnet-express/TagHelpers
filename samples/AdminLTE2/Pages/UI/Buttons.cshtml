@@ -1,0 +1,973 @@
+﻿@page
+@model ButtonsModel
+@{
+    ViewData["Title"] = "Buttons";
+}
+
+@section Styles {
+
+}
+
+@section Scripts {
+
+}
+
+<!-- Content Header (Page header) -->
+<content-header title="Buttons" sub-title="Control panel">
+    <breadcrumb>
+        <breadcrumb-item label="Home" href="/" fa-icon="dashboard" />
+        <breadcrumb-item label="UI" href="/UI" />
+        <breadcrumb-item label="Buttons" active="true" />
+    </breadcrumb>
+</content-header>
+
+<!-- Main content -->
+<content class="">
+    <row>
+        <column size-md="12">
+            <box state="Primary">
+                <box-header fa-icon="edit">
+                    <box-title>Buttons</box-title>
+                </box-header>
+                <box-body>
+                    <p>Various types of buttons. Using the base class <code>.btn</code></p>
+                    <table state="Bordered" responsive="true" text-align="center">
+                        <tr>
+                            <th>Normal</th>
+                            <th>Large <code>.btn-lg</code></th>
+                            <th>Small <code>.btn-sm</code></th>
+                            <th>X-Small <code>.btn-xs</code></th>
+                            <th>Flat <code>.btn-flat</code></th>
+                            <th>Disabled <code>.disabled</code></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button color="@ButtonColor.Primary">Default</button>
+                                <btn-default>Default</btn-default>
+                            </td>
+                            <td>
+                                <btn-default size="lg">Default</btn-default>
+                            </td>
+                            <td>
+                                <btn-default size="sm">Default</btn-default>
+                            </td>
+                            <td>
+                                <btn-default size="xs">Default</btn-default>
+                            </td>
+                            <td>
+                                <btn-flat>Default</btn-flat>
+                            </td>
+                            <td>
+                                <btn-default disabled="true">Default</btn-default>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <btn-primary>Primary</btn-primary>
+                            </td>
+                            <td>
+                                <btn-primary size="lg">Primary</btn-primary>
+                            </td>
+                            <td>
+                                <btn-primary size="sm">Primary</btn-primary>
+                            </td>
+                            <td>
+                                <btn-primary size="xs">Primary</btn-primary>
+                            </td>
+                            <td>
+                                <btn-flat color="primary">Primary</btn-flat>
+                            </td>
+                            <td>
+                                <btn-primary disabled="true">Primary</btn-primary>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <btn-success>Success</btn-success>
+                            </td>
+                            <td>
+                                <btn-success size="lg">Success</btn-success>
+                            </td>
+                            <td>
+                                <btn-success size="sm">Success</btn-success>
+                            </td>
+                            <td>
+                                <btn-success size="xs">Success</btn-success>
+                            </td>
+                            <td>
+                                <btn-flat color="success">Success</btn-flat>
+                            </td>
+                            <td>
+                                <btn-success disabled="true">Success</btn-success>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <btn-info>Info</btn-info>
+                            </td>
+                            <td>
+                                <btn-info size="lg">Info</btn-info>
+                            </td>
+                            <td>
+                                <btn-info size="sm">Info</btn-info>
+                            </td>
+                            <td>
+                                <btn-info size="xs">Info</btn-info>
+                            </td>
+                            <td>
+                                <btn-flat color="info">Info</btn-flat>
+                            </td>
+                            <td>
+                                <btn-info disabled="true">Info</btn-info>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <btn-danger>Danger</btn-danger>
+                            </td>
+                            <td>
+                                <btn-danger size="lg">Danger</btn-danger>
+                            </td>
+                            <td>
+                                <btn-danger size="sm">Danger</btn-danger>
+                            </td>
+                            <td>
+                                <btn-danger size="xs">Danger</btn-danger>
+                            </td>
+                            <td>
+                                <btn-flat color="danger">Danger</btn-flat>
+                            </td>
+                            <td>
+                                <btn-danger disabled>Danger</btn-danger>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <btn-warning>Warning</btn-warning>
+                            </td>
+                            <td>
+                                <btn-warning size="lg">Warning</btn-warning>
+                            </td>
+                            <td>
+                                <btn-warning size="sm">Warning</btn-warning>
+                            </td>
+                            <td>
+                                <btn-warning size="xs">Warning</btn-warning>
+                            </td>
+                            <td>
+                                <btn-flat color="warning">Warning</btn-flat>
+                            </td>
+                            <td>
+                                <btn-warning disabled="true">Warning</btn-warning>
+                            </td>
+                        </tr>
+                    </table>
+                </box-body>
+                <!-- /.box -->
+            </box>
+        </column>
+        <!-- /.col -->
+    </row>
+    <!-- ./row -->
+    <row>
+        <column size-md="6">
+            <!-- Block buttons -->
+            <box>
+                <box-header>
+                    <box-title>Block Buttons</box-title>
+                </box-header>
+                <box-body>
+                    <btn-default block="true">.btn-block</btn-default>
+                    <btn-flat block="true">.btn-block .btn-flat</btn-flat>
+                    <btn-info block="true" size="sm">.btn-block .btn-sm</btn-info>
+                </box-body>
+            </box>
+            <!-- /.box -->
+            <!-- Block buttons -->
+            <box>
+                <box-header>
+                    <box-title>Link Buttons</box-title>
+                </box-header>
+                <box-body>
+                    <btn-link>.btn-link</btn-link>
+                    <btn-link color="primary">.btn-link</btn-link>
+                    <btn-link color="warning" size="sm">.btn-link .btn-sm</btn-link>
+                    <hr />
+                    <btn-link block="true">.btn-link</btn-link>
+                    <btn-link block="true" color="primary">.btn-link</btn-link>
+                    <btn-link block="true" color="warning" size="sm">.btn-link .btn-sm</btn-link>
+                </box-body>
+            </box>
+            <!-- /.box -->
+            <!-- Horizontal grouping -->
+            <box>
+                <box-header>
+                    <box-title>Horizontal Button Group</box-title>
+                </box-header>
+                <box-body>
+                    <p>
+                        Horizontal button groups are easy to create with bootstrap. Just add your buttons
+                        inside <code>&lt;div class="btn-group"&gt;&lt;/div&gt;</code>
+                    </p>
+
+                    <table state="Bordered" responsive="true">
+                        <tr>
+                            <th>Button</th>
+                            <th>Icons</th>
+                            <th>Flat</th>
+                            <th>Dropdown</th>
+                        </tr>
+                        <!-- Default -->
+                        <tr>
+                            <td>
+                                <btn-group>
+                                    <btn-default>Left</btn-default>
+                                    <btn-default>Middle</btn-default>
+                                    <btn-default>Right</btn-default>
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-default fa-icon="align-left" />
+                                    <btn-default fa-icon="align-center" />
+                                    <btn-default fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-flat fa-icon="align-left" />
+                                    <btn-flat fa-icon="align-center" />
+                                    <btn-flat fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-default>1</btn-default>
+                                    <btn-default>2</btn-default>
+
+                                    <btn-group>
+                                        <dropdown-btn></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group>
+                            </td>
+                        </tr>
+                        <!-- ./default -->
+                        <!-- Info -->
+                        <tr>
+                            <td>
+                                <btn-group>
+                                    <btn-info>Left</btn-info>
+                                    <btn-info>Middle</btn-info>
+                                    <btn-info>Right</btn-info>
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-info fa-icon="align-left" />
+                                    <btn-info fa-icon="align-center" />
+                                    <btn-info fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-flat color="info" fa-icon="align-left" />
+                                    <btn-flat color="info" fa-icon="align-center" />
+                                    <btn-flat color="info" fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-info>1</btn-info>
+                                    <btn-info>2</btn-info>
+
+                                    <btn-group>
+                                        <dropdown-btn color="info"></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group>
+                            </td>
+                        </tr>
+                        <!-- /. info -->
+                        <!-- /.danger -->
+                        <tr>
+                            <td>
+                                <btn-group>
+                                    <btn-danger>Left</btn-danger>
+                                    <btn-danger>Middle</btn-danger>
+                                    <btn-danger>Right</btn-danger>
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-danger fa-icon="align-left" />
+                                    <btn-danger fa-icon="align-center" />
+                                    <btn-danger fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-flat color="danger" fa-icon="align-left" />
+                                    <btn-flat color="danger" fa-icon="align-center" />
+                                    <btn-flat color="danger" fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-danger>1</btn-danger>
+                                    <btn-danger>2</btn-danger>
+
+                                    <btn-group>
+                                        <dropdown-btn color="danger"></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group>
+                            </td>
+                        </tr>
+                        <!-- /.danger -->
+                        <!-- warning -->
+                        <tr>
+                            <td>
+                                <btn-group>
+                                    <btn-warning>Left</btn-warning>
+                                    <btn-warning>Middle</btn-warning>
+                                    <btn-warning>Right</btn-warning>
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-warning fa-icon="align-left" />
+                                    <btn-warning fa-icon="align-center" />
+                                    <btn-warning fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-flat color="warning" fa-icon="align-left" />
+                                    <btn-flat color="warning" fa-icon="align-center" />
+                                    <btn-flat color="warning" fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-warning>1</btn-warning>
+                                    <btn-warning>2</btn-warning>
+
+                                    <btn-group>
+                                        <dropdown-btn color="warning"></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group>
+                            </td>
+                        </tr>
+                        <!-- /.warning -->
+                        <!-- success -->
+                        <tr>
+                            <td>
+                                <btn-group>
+                                    <btn-success>Left</btn-success>
+                                    <btn-success>Middle</btn-success>
+                                    <btn-success>Right</btn-success>
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-success fa-icon="align-left" />
+                                    <btn-success fa-icon="align-center" />
+                                    <btn-success fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-flat color="success" fa-icon="align-left" />
+                                    <btn-flat color="success" fa-icon="align-center" />
+                                    <btn-flat color="success" fa-icon="align-right" />
+                                </btn-group>
+                            </td>
+                            <td>
+                                <btn-group>
+                                    <btn-success>1</btn-success>
+                                    <btn-success>2</btn-success>
+
+                                    <btn-group>
+                                        <dropdown-btn color="success"></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group>
+                            </td>
+                        </tr>
+                        <!-- /.success -->
+                    </table>
+                </box-body>
+            </box>
+            <!-- /.box -->
+
+            <box>
+                <box-header>
+                    <box-title>Button Addon</box-title>
+                </box-header>
+                <box-body>
+
+                    <p>With dropdown</p>
+
+                    <input-group class="margin">
+                        <input-group-btn>
+                            <dropdown-btn>Action</dropdown-btn>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </input-group-btn>
+                        <!-- /btn-group -->
+                        <form-control type="text" />
+                    </input-group>
+
+                    <!-- /input-group -->
+                    <p>Normal</p>
+
+                    <input-group class="margin">
+                        <input-group-btn>
+                            <btn-danger>Action</btn-danger>
+                        </input-group-btn>
+                        <!-- /btn-group -->
+                        <form-control type="text" />
+                    </input-group>
+                    <!-- /input-group -->
+                    <p>Flat</p>
+
+                    <input-group class="margin">
+                        <form-control type="text" />
+                        <input-group-btn>
+                            <btn-flat color="info">Go!</btn-flat>
+                        </input-group-btn>
+                    </input-group>
+                    <!-- /input-group -->
+                </box-body>
+                <!-- /.box-body -->
+            </box>
+            <!-- /.box -->
+            <!-- split buttons box -->
+            <box>
+                <box-header>
+                    <box-title>Split buttons</box-title>
+                </box-header>
+                <box-body>
+
+                    <!-- Split button -->
+                    <p>Normal split buttons:</p>
+
+                    <div class="margin">
+                        <btn-group>
+                            <btn-default>Action</btn-default>
+                            <dropdown-btn>
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                        <btn-group>
+                            <btn-info>Action</btn-info>
+                            <dropdown-btn color="info">
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                        <btn-group>
+                            <btn-danger>Action</btn-danger>
+                            <dropdown-btn color="danger">
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                        <btn-group>
+                            <btn-success>Action</btn-success>
+                            <dropdown-btn color="success">
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                        <btn-group>
+                            <btn-warning>Action</btn-warning>
+                            <dropdown-btn color="warning">
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                    </div>
+
+                    <!-- flat split buttons -->
+                    <p>Flat split buttons:</p>
+
+                    <div class="margin">
+                        <btn-group>
+                            <btn-flat>Action</btn-flat>
+                            <dropdown-btn-flat>
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn-flat>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                        <btn-group>
+                            <btn-flat color="info">Action</btn-flat>
+                            <dropdown-btn-flat color="info">
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn-flat>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                        <btn-group>
+                            <btn-flat color="danger">Action</btn-flat>
+                            <dropdown-btn-flat color="danger">
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn-flat>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                        <btn-group>
+                            <btn-flat color="success">Action</btn-flat>
+                            <dropdown-btn-flat color="success">
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn-flat>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                        <btn-group>
+                            <btn-flat color="warning">Action</btn-flat>
+                            <dropdown-btn-flat color="warning">
+                                <sr-only>Toggle Dropdown</sr-only>
+                            </dropdown-btn-flat>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </btn-group>
+                    </div>
+                </box-body>
+                <!-- /.box-body -->
+            </box>
+            <!-- end split buttons box -->
+            <!-- social buttons -->
+            <box>
+                <box-header>
+                    <box-title>
+                        Social Buttons (By <a href="https://github.com/lipis/bootstrap-social">Lipis</a>)
+                    </box-title>
+                </box-header>
+                <box-body>
+                    <btn-social block icon="adn">Sign in with App.net</btn-social>
+                    <btn-social block icon="bitbucket">Sign in with Bitbucket</btn-social>
+                    <btn-social block icon="dropbox">Sign in with Dropbox</btn-social>
+                    <btn-social block icon="facebook">Sign in with Facebook</btn-social>
+                    <btn-social block icon="flickr">Sign in with Flickr</btn-social>
+                    <btn-social block icon="foursquare">Sign in with Foursquare</btn-social>
+                    <btn-social block icon="github">Sign in with GitHub</btn-social>
+                    <btn-social block icon="google">Sign in with Google</btn-social>
+                    <btn-social block icon="instagram">Sign in with Instagram</btn-social>
+                    <btn-social block icon="linkedin">Sign in with LinkedIn</btn-social>
+                    <btn-social block icon="microsoft">Sign in with Microsoft</btn-social>
+                    <btn-social block icon="odnoklassniki">Sign in with Odnoklassniki</btn-social>
+                    <btn-social block icon="openid">Sign in with OpenId</btn-social>
+                    <btn-social block icon="pinterest">Sign in with Pinterest</btn-social>
+                    <btn-social block icon="reddit">Sign in with Reddit</btn-social>
+                    <btn-social block icon="soundcloud">Sign in with SoundCloud</btn-social>
+                    <btn-social block icon="tumblr">Sign in with Tumblr</btn-social>
+                    <btn-social block icon="twitter">Sign in with Twitter</btn-social>
+                    <btn-social block icon="vk">Sign in with VK</btn-social>
+
+                    <br>
+
+                    <div class="text-center">
+                        <btn-social flat icon="adn" />
+                        <btn-social flat icon="bitbucket" />
+                        <btn-social flat icon="dropbox" />
+                        <btn-social flat icon="facebook" />
+                        <btn-social flat icon="flickr" />
+                        <btn-social flat icon="foursquare" />
+                        <btn-social flat icon="github" />
+                        <btn-social flat icon="google" />
+                        <btn-social flat icon="instagram" />
+                        <btn-social flat icon="linkedin" />
+                        <btn-social flat icon="microsoft" />
+                        <btn-social flat icon="odnoklassniki" />
+                        <btn-social flat icon="openid" />
+                        <btn-social flat icon="pinterest" />
+                        <btn-social flat icon="reddit" />
+                        <btn-social flat icon="soundcloud" />
+                        <btn-social flat icon="tumblr" />
+                        <btn-social flat icon="twitter" />
+                        <btn-social flat icon="vk" />
+                    </div>
+                </box-body>
+            </box>
+            <!-- /.box -->
+
+        </column>
+        <!-- /.col -->
+        <column size-md="6">
+            <!-- Application buttons -->
+            <box>
+                <box-header>
+                    <box-title>Application Buttons</box-title>
+                </box-header>
+                <box-body>
+                    <p>Add the classes <code>.btn.btn-app</code> to an <code>&lt;a></code> tag to achieve the following:</p>
+
+                    <btn-app icon="edit">Edit</btn-app>
+                    <btn-app icon="play">Play</btn-app>
+                    <btn-app icon="repeat">Repeat</btn-app>
+                    <btn-app icon="pause">Pause</btn-app>
+                    <btn-app icon="save">Save</btn-app>
+                    <btn-app icon="bullhorn">
+                        <badge bg-color="bg-yellow">3</badge>
+                        Notifications
+                    </btn-app>
+                    <btn-app icon="barcode">
+                        <badge bg-color="green">300</badge>
+                        Products
+                    </btn-app>
+                    <btn-app icon="users">
+                        <badge bg-color="purple">891</badge>
+                        Users
+                    </btn-app>
+                    <btn-app icon="inbox">
+                        <badge bg-color="teal">67</badge>
+                        Orders
+                    </btn-app>
+                    <btn-app icon="envelope">
+                        <badge bg-color="aqua">12</badge>
+                        Inbox
+                    </btn-app>
+                    <btn-app icon="heart-o">
+                        <badge bg-color="red">531</badge>
+                        Likes
+                    </btn-app>
+                </box-body>
+                <!-- /.box-body -->
+            </box>
+            <!-- /.box -->
+            <!-- Various colors -->
+            <box>
+                <box-header>
+                    <box-title>Different colors</box-title>
+                </box-header>
+                <box-body>
+                    <p>
+                        Mix and match with various background colors. Use base class <code>.btn</code> and add any available
+                        <code>.bg-*</code> class
+                    </p>
+                    <!-- You may notice a .margin class added
+                    here but that's only to make the content
+                    display correctly without having to use a table-->
+                    <p>
+                        <btn-flat type="button" bg-color="maroon" class="margin">.btn.bg-maroon.btn-flat</btn-flat>
+                        <btn-flat type="button" bg-color="purple" class="margin">.btn.bg-purple.btn-flat</btn-flat>
+                        <btn-flat type="button" bg-color="navy" class="margin">.btn.bg-navy.btn-flat</btn-flat>
+                        <btn-flat type="button" bg-color="orange" class="margin">.btn.bg-orange.btn-flat</btn-flat>
+                        <btn-flat type="button" bg-color="olive" class="margin">.btn.bg-olive.btn-flat</btn-flat>
+                    </p>
+
+                    <p>
+                        <button type="button" bg-color="maroon" class="margin">.btn.bg-maroon</button>
+                        <button type="button" bg-color="purple" class="margin">.btn.bg-purple</button>
+                        <button type="button" bg-color="navy" class="margin">.btn.bg-navy</button>
+                        <button type="button" bg-color="orange" class="margin">.btn.bg-orange</button>
+                        <button type="button" bg-color="olive" class="margin">.btn.bg-olive</button>
+                    </p>
+                </box-body>
+            </box>
+            <!-- /.box -->
+            <!-- Vertical grouping -->
+            <box class="box">
+                <box-header>
+                    <box-title>Vertical Button Group</box-title>
+                </box-header>
+                <box-body class="pad">
+
+                    <p>
+                        Vertical button groups are easy to create with bootstrap. Just add your buttons
+                        inside <code>&lt;div class="btn-group-vertical"&gt;&lt;/div&gt;</code>
+                    </p>
+
+                    <table state="Bordered" responsive="true">
+                        <tr>
+                            <th>Button</th>
+                            <th>Icons</th>
+                            <th>Flat</th>
+                            <th>Dropdown</th>
+                        </tr>
+                        <!-- Default -->
+                        <tr>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-default>Top</btn-default>
+                                    <btn-default>Middle</btn-default>
+                                    <btn-default>Bottom</btn-default>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-default fa-icon="align-left"></btn-default>
+                                    <btn-default fa-icon="align-center"></btn-default>
+                                    <btn-default fa-icon="align-right"></btn-default>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-flat fa-icon="align-left"></btn-flat>
+                                    <btn-flat fa-icon="align-center"></btn-flat>
+                                    <btn-flat fa-icon="align-right"></btn-flat>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-default>1</btn-default>
+                                    <btn-default>2</btn-default>
+
+                                    <btn-group>
+                                        <dropdown-btn></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group-vertical>
+                            </td>
+                        </tr>
+                        <!-- ./default -->
+                        <!-- Info -->
+                        <tr>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-info>Top</btn-info>
+                                    <btn-info>Middle</btn-info>
+                                    <btn-info>Bottom</btn-info>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-info fa-icon="align-left"></btn-info>
+                                    <btn-info fa-icon="align-center"></btn-info>
+                                    <btn-info fa-icon="align-right"></btn-info>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-flat color="info" fa-icon="align-left"></btn-flat>
+                                    <btn-flat color="info" fa-icon="align-center"></btn-flat>
+                                    <btn-flat color="info" fa-icon="align-right"></btn-flat>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-info>1</btn-info>
+                                    <btn-info>2</btn-info>
+
+                                    <btn-group>
+                                        <dropdown-btn color="info"></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group-vertical>
+                            </td>
+                        </tr>
+                        <!-- /. info -->
+                        <!-- /.danger -->
+                        <tr>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-danger>Top</btn-danger>
+                                    <btn-danger>Middle</btn-danger>
+                                    <btn-danger>Bottom</btn-danger>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-danger fa-icon="align-left"></btn-danger>
+                                    <btn-danger fa-icon="align-center"></btn-danger>
+                                    <btn-danger fa-icon="align-right"></btn-danger>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-flat color="danger" fa-icon="align-left"></btn-flat>
+                                    <btn-flat color="danger" fa-icon="align-center"></btn-flat>
+                                    <btn-flat color="danger" fa-icon="align-right"></btn-flat>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-danger>1</btn-danger>
+                                    <btn-danger>2</btn-danger>
+
+                                    <btn-group>
+                                        <dropdown-btn color="danger"></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group-vertical>
+                            </td>
+                        </tr>
+                        <!-- /.danger -->
+                        <!-- warning -->
+                        <tr>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-warning>Top</btn-warning>
+                                    <btn-warning>Middle</btn-warning>
+                                    <btn-warning>Bottom</btn-warning>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-warning fa-icon="align-left"></btn-warning>
+                                    <btn-warning fa-icon="align-center"></btn-warning>
+                                    <btn-warning fa-icon="align-right"></btn-warning>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-flat color="warning" fa-icon="align-left"></btn-flat>
+                                    <btn-flat color="warning" fa-icon="align-center"></btn-flat>
+                                    <btn-flat color="warning" fa-icon="align-right"></btn-flat>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-warning>1</btn-warning>
+                                    <btn-warning>2</btn-warning>
+
+                                    <btn-group>
+                                        <dropdown-btn color="warning"></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group-vertical>
+                            </td>
+                        </tr>
+                        <!-- /.warning -->
+                        <!-- success -->
+                        <tr>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-success>Top</btn-success>
+                                    <btn-success>Middle</btn-success>
+                                    <btn-success>Bottom</btn-success>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-success fa-icon="align-left"></btn-success>
+                                    <btn-success fa-icon="align-center"></btn-success>
+                                    <btn-success fa-icon="align-right"></btn-success>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-flat color="success" fa-icon="align-left"></btn-flat>
+                                    <btn-flat color="success" fa-icon="align-center"></btn-flat>
+                                    <btn-flat color="success" fa-icon="align-right"></btn-flat>
+                                </btn-group-vertical>
+                            </td>
+                            <td>
+                                <btn-group-vertical>
+                                    <btn-success>1</btn-success>
+                                    <btn-success>2</btn-success>
+
+                                    <btn-group>
+                                        <dropdown-btn color="success"></dropdown-btn>
+                                        <dropdown-menu>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                            <dropdown-item>Dropdown link</dropdown-item>
+                                        </dropdown-menu>
+                                    </btn-group>
+                                </btn-group-vertical>
+                            </td>
+                        </tr>
+                        <!-- /.success -->
+                    </table>
+                </box-body>
+                <!-- /.box-body -->
+            </box>
+            <!-- /.box -->
+        </column>
+        <!-- /.col -->
+    </row>
+    <!-- /. row -->
+</content>
+<!-- /.content -->

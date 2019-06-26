@@ -1,0 +1,10 @@
+﻿@model string
+@using Dynamic.NET.TagHelpers.Bootstrap3.Components
+
+@if (!String.IsNullOrEmpty(Model))
+{
+    var status = Model.StartsWith("Error") ? AlertTagStatus.Danger : AlertTagStatus.Success;
+    <alert status="@status" dismissible="true" data-auto-dismiss="3000" style="border-radius: 0!important">
+        @Model
+    </alert>
+}

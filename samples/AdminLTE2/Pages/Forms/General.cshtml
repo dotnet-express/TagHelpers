@@ -1,0 +1,375 @@
+﻿@page
+@model GeneralModel
+@{
+    ViewData["Title"] = "General";
+}
+
+@section Styles {
+
+}
+
+<!-- Content Header (Page header) -->
+<content-header title="General Form Elements" sub-title="Preview">
+    <breadcrumb>
+        <breadcrumb-item label="Home" href="#" fa-icon="dashboard" />
+        <breadcrumb-item label="Forms" href="#" fa-icon="edit" />
+        <breadcrumb-item label="General Elements" active="true" />
+    </breadcrumb>
+</content-header>
+
+<!-- Main content -->
+<content>
+    <row>
+        <!-- left column -->
+        <column size-md="6">
+            <!-- form start -->
+            <form id="form1" asp-action="" enctype="multipart/form-data" form-validation="true" form-validation-messages="true" role="form" novalidate>
+                <!-- general form elements -->
+                <box state="Primary">
+                    <box-header fa-icon="fa-ambulance">
+                        <box-title>Quick Example</box-title>
+                    </box-header>
+                    <!-- /.box-header -->
+                    <box-body>
+                        <form-group>
+                            <form-control type="email" id="exampleInputEmail1" asp-for="Form1.Email" placeholder="Enter email" />
+                        </form-group>
+                        <form-group>
+                            <form-control type="password" asp-for="Form1.Password" id="exampleInputPassword1" placeholder="Password" />
+                        </form-group>
+                        <form-group>
+                            <form-control type="file" asp-for="Form1.File" id="exampleInputFile" help="Example block-level help text here." />
+                        </form-group>
+                        <form-group>
+                            <form-checkbox type="checkbox" asp-for="Form1.IsCheck" />
+                        </form-group>
+                        <form-group form-validation-summary="true" />
+                    </box-body>
+                    <!-- /.box-body -->
+
+                    <box-footer>
+                        <btn-primary type="submit">Submit</btn-primary>
+                    </box-footer>
+                </box>
+                <!-- /.box -->
+            </form>
+
+            <!-- Form Element sizes -->
+            <box state="Success">
+                <box-header>
+                    <box-title>Different Height</box-title>
+                </box-header>
+                <box-body>
+                    <form-control type="text" size="Large" placeholder=".input-lg" />
+                    <br>
+                    <form-control type="text" size="Default" placeholder="default input" />
+                    <br>
+                    <form-control type="text" size="Small" placeholder=".input-sm" />
+                </box-body>
+                <!-- /.box-body -->
+            </box>
+            <!-- /.box -->
+
+            <box state="Danger">
+                <box-header>
+                    <box-title>Different Width</box-title>
+                </box-header>
+                <box-body>
+                    <row>
+                        <column size-xs="3">
+                            <form-control type="text" placeholder=".col-xs-3">
+                        </column>
+                        <column size-xs="4">
+                            <form-control type="text" placeholder=".col-xs-4">
+                        </column>
+                        <column size-xs="5">
+                            <form-control type="text" placeholder=".col-xs-5">
+                        </column>
+                    </row>
+                </box-body>
+                <!-- /.box-body -->
+            </box>
+            <!-- /.box -->
+            <!-- Input addon -->
+            <box state="Info">
+                <box-header>
+                    <box-title>Input Addon</box-title>
+                </box-header>
+                <box-body>
+                    <input-group>
+                        <input-group-addon text="@@" />
+                        <form-control type="text" placeholder="Username" />
+                    </input-group>
+                    <br>
+                    <input-group>
+                        <form-control type="text" />
+                        <input-group-addon>.00</input-group-addon>
+                    </input-group>
+                    <br />
+                    <input-group>
+                        <form-control type="text" input-group-prepend="$" input-group-append=".00" form-validation-message="true" />
+                    </input-group>
+
+                    <h4>With icons</h4>
+
+                    <input-group>
+                        <input-group-addon fa-icon="envelope" />
+                        <form-control type="email" placeholder="Email" />
+                    </input-group>
+                    <br />
+                    <input-group>
+                        <form-control type="text" />
+                        <input-group-addon fa-icon="check" />
+                    </input-group>
+                    <br />
+                    <input-group>
+                        <input-group-addon fa-icon="dollar" />
+                        <form-control type="text" />
+                        <input-group-addon fa-icon="ambulance" />
+                    </input-group>
+
+                    <h4>With checkbox and radio inputs</h4>
+
+                    <row>
+                        <column size-lg="6">
+                            <input-group>
+                                <input-group-addon>
+                                    <input type="checkbox" id="optionsCheckboxInputGroup1">
+                                </input-group-addon>
+                                <form-control type="text">
+                            </input-group>
+                            <!-- /input-group -->
+                        </column>
+                        <!-- /.col-lg-6 -->
+                        <column size-lg="6">
+                            <input-group>
+                                <input-group-addon>
+                                    <input type="radio" id="optionsRadioInputGroup1">
+                                </input-group-addon>
+                                <form-control type="text">
+                            </input-group>
+                            <!-- /input-group -->
+                        </column>
+                        <!-- /.col-lg-6 -->
+                    </row>
+                    <!-- /.row -->
+
+                    <h4>With buttons</h4>
+
+                    <p class="margin">Large: <code>.input-group.input-group-lg</code></p>
+
+                    <input-group size="Large">
+                        <input-group-btn>
+                            <dropdown-btn color="Warning">
+                                Action
+                            </dropdown-btn>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                            </dropdown-menu>
+                        </input-group-btn>
+                        <!-- /btn-group -->
+                        <form-control type="text" />
+                    </input-group>
+
+                    <p class="margin">Large: <code>.input-group.input-group-lg</code></p>
+
+                    <input-group size="Large">
+                        <input-group-btn>
+
+                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                Action
+                                <span class="fa fa-caret-down"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </input-group-btn>
+                        <!-- /btn-group -->
+                        <form-control type="text" />
+                    </input-group>
+                    <!-- /input-group -->
+
+                    <p class="margin">Normal</p>
+
+                    <input-group>
+                        <div class="input-group-btn">
+                            <btn-danger>Action</btn-danger>
+                        </div>
+                        <!-- /btn-group -->
+                        <form-control type="text" />
+                    </input-group>
+                    <!-- /input-group -->
+                    <p class="margin">Small <code>.input-group.input-group-sm</code></p>
+
+                    <input-group size="Small">
+                        <form-control type="text" />
+                        <input-group-btn>
+                            <btn-info flat>Go!</btn-info>
+                        </input-group-btn>
+                    </input-group>
+                    <!-- /input-group -->
+                </box-body>
+                <!-- /.box-body -->
+            </box>
+            <!-- /.box -->
+
+        </column>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <column size-md="6">
+
+            <!-- Horizontal Form -->
+            <form asp-page-handler="Form2" layout="Horizontal" form-validation="true" form-validation-messages="false" role="form" novalidate>
+                <box state="Info">
+                    <box-header>
+                        <box-title>
+                            Horizontal Form
+                        </box-title>
+                    </box-header>
+
+                    <box-body class="box-body">
+                        <form-group>
+                            <input-group>
+                                <input-group-addon text="@@" />
+                                <form-control type="email" id="inputEmail3" asp-for="Form2.Email" placeholder="Email" />
+                            </input-group>
+                        </form-group>
+                        <form-group>
+                            <form-control type="password" id="inputPassword3" asp-for="Form2.Password" placeholder="Password">
+                        </form-group>
+                        <form-group>
+                            <form-checkbox asp-for="Form2.IsCheck" label-text="Remember me">
+                        </form-group>
+                    </box-body>
+
+                    <box-footer>
+                        <btn-default type="button" state="normal">Cancel</btn-default>
+                        <btn-info type="submit" state="info" class="pull-right">Sign in</btn-info>
+                    </box-footer>
+                </box>
+            </form>
+
+            <!-- general form elements disabled -->
+            <form role="form">
+                <box state="Warning">
+                    <box-header>
+                        <box-title>General Elements</box-title>
+                    </box-header>
+                    <!-- /.box-header -->
+                    <box-body>
+
+                        <!-- text input -->
+                        <form-group>
+                            <label>Text</label>
+                            <form-control type="text" placeholder="Enter ..." />
+                        </form-group>
+                        <form-group>
+                            <label>Text Disabled</label>
+                            <form-control type="text" placeholder="Enter ..." disabled="true" />
+                        </form-group>
+
+                        <!-- textarea -->
+                        <form-group>
+                            <form-textarea label-text="Textarea" rows="3" placeholder="Enter ..." />
+                        </form-group>
+                        <form-group>
+                            <label>Textarea Disabled</label>
+                            <textarea class="form-control" rows="3" placeholder="Enter ..." disabled></textarea>
+                        </form-group>
+
+                        <!-- input states -->
+                        <form-group state="Success">
+                            <label for="inputSuccess" fa-icon="check">Input with success</label>
+                            <form-control type="text" id="inputSuccess" placeholder="Enter ..." />
+                            <help-block>Help block with success</help-block>
+                        </form-group>
+                        <form-group state="Warning">
+                            <label for="inputWarning" fa-icon="bell-o">Input with warning</label>
+                            <form-control type="text" id="inputWarning" placeholder="Enter ..." />
+                            <help-block>Help block with warning</help-block>
+                        </form-group>
+                        <form-group state="Error">
+                            <label for="inputError" fa-icon="fa-times-circle-o">Input with error</label>
+                            <form-control type="text" id="inputError" placeholder="Enter ..." />
+                            <help-block>Help block with error</help-block>
+                        </form-group>
+
+                        <!-- checkbox -->
+                        <form-group>
+                            <form-checkbox label-text="Checkbox 1" />
+                            <form-checkbox label-text="Checkbox 2" />
+                            <form-checkbox label-text="Checkbox 3" disabled="true" />
+                        </form-group>
+
+                        <!-- radio -->
+                        <form-group>
+                            <form-radio type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked
+                                        label-text="Option one is this and that&mdash;be sure to include why it's great" />
+
+                            <form-radio type="radio" name="optionsRadios" id="optionsRadios2" value="option2"
+                                        label-text="Option two can be something else and selecting it will deselect option one" />
+
+                            <form-radio type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="true"
+                                        label-text="Option three is disabled" />
+                        </form-group>
+
+                        <!-- select -->
+                        <form-group>
+                            <form-select label-text="Select">
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </form-select>
+                        </form-group>
+                        <form-group>
+                            <form-select label-text="Select Disabled" disabled="true">
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </form-select>
+                        </form-group>
+
+                        <!-- Select multiple-->
+                        <form-group>
+                            <label>Select Multiple</label>
+                            <form-select multiple>
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </form-select>
+                        </form-group>
+                        <form-group>
+                            <label>Select Multiple Disabled</label>
+                            <form-select multiple disabled="true">
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </form-select>
+                        </form-group>
+
+                    </box-body>
+                    <!-- /.box-body -->
+                </box>
+                <!-- /.box -->
+            </form>
+        </column>
+        <!--/.col (right) -->
+    </row>
+    <!-- /.row -->
+</content>

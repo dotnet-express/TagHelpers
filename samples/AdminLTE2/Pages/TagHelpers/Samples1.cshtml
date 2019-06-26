@@ -1,0 +1,651 @@
+﻿@page
+@{
+    ViewData["Title"] = "Bootstrap3 TagHelpers";
+}
+
+<!-- Content Header (Page header) -->
+<content-header title="Bootstrap 2" sub-title="TagHelpers">
+    <breadcrumb>
+        <breadcrumb-item label="Home" href="#" icon="dashboard" />
+        <breadcrumb-item label="TagHelpers" href="~/TagHelpers" icon="edit" />
+        <breadcrumb-item label="Samples 1" active="true" />
+    </breadcrumb>
+</content-header>
+
+<!-- Main content -->
+<content>
+    <box>
+        <box-header>
+            <box-title>Dropdowns</box-title>
+        </box-header>
+        <box-body>
+
+            <btn-group>
+                <btn-default>Action</btn-default>
+                <dropdown-btn>Dropdown</dropdown-btn>
+                <dropdown-menu>
+                    <dropdown-item>Action</dropdown-item>
+                    <dropdown-item>Another action</dropdown-item>
+                    <dropdown-item>Something else here</dropdown-item>
+                    <dropdown-divider />
+                    <dropdown-item>Separated link</dropdown-item>
+                </dropdown-menu>
+            </btn-group>
+
+            <btn-group class="dropup">
+                <dropdown-btn>Dropup</dropdown-btn>
+                <dropdown-menu>
+                    <dropdown-item>Action</dropdown-item>
+                    <dropdown-item>Another action</dropdown-item>
+                    <dropdown-item>Something else here</dropdown-item>
+                    <dropdown-divider />
+                    <dropdown-item>Separated link</dropdown-item>
+                </dropdown-menu>
+            </btn-group>
+
+            <p>Input group</p>
+
+            <input-group class="margin">
+                <input-group-btn>
+                    <dropdown-btn>Action</dropdown-btn>
+                    <dropdown-menu>
+                        <dropdown-item>Action</dropdown-item>
+                        <dropdown-item>Another action</dropdown-item>
+                        <dropdown-item>Something else here</dropdown-item>
+                        <dropdown-divider />
+                        <dropdown-item>Separated link</dropdown-item>
+                    </dropdown-menu>
+                </input-group-btn>
+                <!-- /btn-group -->
+                <form-control type="text" />
+            </input-group>
+        </box-body>
+        <!-- /.box-body -->
+    </box>
+    <!-- /.box -->
+
+    <nav-tabs-custom>
+        <nav-tabs>
+            <nav-item tab-pane="home" active="true">Home</nav-item>
+            <nav-item tab-pane="profile">Profile</nav-item>
+            <nav-item tab-pane="messages">Messages</nav-item>
+            <nav-dropdown>
+                <dropdown-link>Dropdown</dropdown-link>
+                <dropdown-menu>
+                    <dropdown-item data-toggle="tab" data-target="#profile">Action</dropdown-item>
+                    <dropdown-item>Another action</dropdown-item>
+                    <dropdown-item>Something else here</dropdown-item>
+                    <dropdown-divider />
+                    <dropdown-item>Separated link</dropdown-item>
+                    <dropdown-divider />
+                    <dropdown-item>One more separated link</dropdown-item>
+                </dropdown-menu>
+            </nav-dropdown>
+            <nav-item disabled="true">Disabled</nav-item>
+        </nav-tabs>
+        <tab-content>
+            <tab-pane id="home" active="true">Home content</tab-pane>
+            <tab-pane id="profile">Profile content</tab-pane>
+            <tab-pane id="messages">Messages content</tab-pane>
+        </tab-content>
+    </nav-tabs-custom>
+
+
+    <box>
+        <box-header>
+            <box-title>Navbar</box-title>
+        </box-header>
+        <box-body>
+            <navbar collapsible="true" id="bs-example-navbar1">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <navbar-header class="navbar-header">
+                    <navbar-brand href="#">Brand</navbar-brand>
+                </navbar-header>
+                <navbar-content>
+                    <navbar-items>
+                        <navbar-link active="true">Link <sr-only>(current)</sr-only></navbar-link>
+                        <navbar-link>Link</navbar-link>
+                        <navbar-dropdown>
+                            <dropdown-link>Dropdown 1</dropdown-link>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>One more separated link</dropdown-item>
+                            </dropdown-menu>
+                        </navbar-dropdown>
+                        <navbar-link disabled="true">Link</navbar-link>
+                    </navbar-items>
+                    <navbar-items pull-right="true">
+                        <navbar-link>Link</navbar-link>
+                        <navbar-dropdown>
+                            <dropdown-link>Dropdown 2</dropdown-link>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>One more separated link</dropdown-item>
+                            </dropdown-menu>
+                        </navbar-dropdown>
+                    </navbar-items>
+                    <form pull-right="true">
+                        <form-group>
+                            <form-control type="text" placeholder="Search">
+                        </form-group>
+                        <btn-primary  type="button">Submit</btn-primary>
+                    </form>
+                </navbar-content>
+            </navbar>
+
+            <navbar collapsible="true" inverse="true" id="bs-example-navbar2">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <navbar-header class="navbar-header">
+                    <navbar-brand href="#">Brand</navbar-brand>
+                </navbar-header>
+                <navbar-content>
+                    <navbar-items>
+                        <navbar-link active="true">Link <sr-only>(current)</sr-only></navbar-link>
+                        <navbar-link>Link</navbar-link>
+                        <navbar-dropdown>
+                            <dropdown-link>Dropdown 1</dropdown-link>
+                            <dropdown-menu>
+                                <dropdown-item>Action</dropdown-item>
+                                <dropdown-item>Another action</dropdown-item>
+                                <dropdown-item>Something else here</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>Separated link</dropdown-item>
+                                <dropdown-divider />
+                                <dropdown-item>One more separated link</dropdown-item>
+                            </dropdown-menu>
+                        </navbar-dropdown>
+                        <navbar-link disabled="true">Link</navbar-link>
+                    </navbar-items>
+                    <navbar-text>Welcome to AdminLTE! <a href="#">Mark Otto</a></navbar-text>
+                </navbar-content>
+            </navbar>
+        </box-body>
+        <!-- /.box-body -->
+    </box>
+    <!-- /.box -->
+
+    <box>
+        <box-header>
+            <box-title>Pagination</box-title>
+        </box-header>
+        <box-body>
+            <p>Default</p>
+            <pagination>
+                <pager-prev disabled="true"></pager-prev>
+                <pager-item active="true">1</pager-item>
+                <pager-item>2</pager-item>
+                <pager-item>3</pager-item>
+                <pager-item>4</pager-item>
+                <pager-item>5</pager-item>
+                <pager-next>6-10</pager-next>
+            </pagination>
+            <p>Pager</p>
+            <pager>
+                <pager-prev disabled="true">Older</pager-prev>
+                <pager-item active="true">1</pager-item>
+                <pager-item>2</pager-item>
+                <pager-item>3</pager-item>
+                <pager-item>4</pager-item>
+                <pager-item>5</pager-item>
+                <pager-next>Newer</pager-next>
+            </pager>
+        </box-body>
+        <!-- /.box-body -->
+    </box>
+    <!-- /.box -->
+
+    <box>
+        <box-header>
+            <box-title>Jumbotron</box-title>
+        </box-header>
+        <box-body>
+            <container>
+                <jumbotron>
+                    <h1>Hello, world!</h1>
+                    <p>...</p>
+                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+                </jumbotron>
+            </container>
+        </box-body>
+        <!-- /.box-body -->
+    </box>
+    <!-- /.box -->
+
+    <box>
+        <box-header>
+            <box-title>Thumbnail</box-title>
+        </box-header>
+        <box-body>
+            <row>
+                <column size-xs="6" size-md="3">
+                    <thumbnail url="#">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY3MTk3ZmMxMTQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjcxOTdmYzExNCI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="..." />
+                    </thumbnail>
+                </column>
+                <column size-xs="6" size-md="3">
+                    <thumbnail url="#">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY3MTk3ZmMxMTQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjcxOTdmYzExNCI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="..." />
+                    </thumbnail>
+                </column>
+                <column size-xs="6" size-md="3">
+                    <thumbnail url="#">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY3MTk3ZmMxMTQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjcxOTdmYzExNCI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="..." />
+                    </thumbnail>
+                </column>
+                <column size-xs="6" size-md="3">
+                    <thumbnail url="#">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY3MTk3ZmMxMTQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjcxOTdmYzExNCI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="..." />
+                    </thumbnail>
+                </column>
+            </row>
+
+            <row>
+                <column size-sm="6" size-md="4">
+                    <thumbnail>
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY3MTk3ZmMxMTQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjcxOTdmYzExNCI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="..." />
+                        <caption title="Thumbnail label">
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><btn-primary>Button</btn-primary> <btn-default>Button</btn-default></p>
+                        </caption>
+                    </thumbnail>
+                </column>
+                <column size-sm="6" size-md="4">
+                    <thumbnail>
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY3MTk3ZmMxMTQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjcxOTdmYzExNCI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="..." />
+                        <caption title="Thumbnail label">
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><btn-primary>Button</btn-primary> <btn-default>Button</btn-default></p>
+                        </caption>
+                    </thumbnail>
+                </column>
+                <column size-sm="6" size-md="4">
+                    <thumbnail>
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTY3MTk3ZmMxMTQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNjcxOTdmYzExNCI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OS41NTQ2ODc1IiB5PSI5NC41Ij4xNzF4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="..." />
+                        <caption title="Thumbnail label">
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><btn-primary>Button</btn-primary> <btn-default>Button</btn-default></p>
+                        </caption>
+                    </thumbnail>
+                </column>
+            </row>
+        </box-body>
+        <!-- /.box-body -->
+    </box>
+    <!-- /.box -->
+
+    <box>
+        <box-header>
+            <box-title>Progress Bars</box-title>
+        </box-header>
+        <box-body>
+            <progress-bar value="60" labeled="false" />
+            <progress-bar value="0" labeled="true" />
+
+            <progress-bar value="20" labeled="true" color="Success" />
+            <progress-bar value="40" labeled="true" color="Info" />
+            <progress-bar value="60" labeled="true" color="Warning" />
+            <progress-bar value="80" labeled="true" color="Danger" />
+
+            <progress-bar value="20" labeled="true" color="Success" striped="true" />
+            <progress-bar value="40" labeled="true" color="Info" striped="true" />
+            <progress-bar value="60" labeled="true" color="Warning" striped="true" />
+            <progress-bar value="80" labeled="true" color="Danger" striped="true" />
+
+            <progress-bar value="80" labeled="true" animated="true" />
+            <progress-bar value="40" labeled="true" animated="true" color="Success" />
+            <progress-bar value="50" labeled="true" animated="true" color="Info" />
+            <progress-bar value="60" labeled="true" animated="true" color="Warning" />
+            <progress-bar value="20" labeled="true" animated="true" color="Danger" />
+
+            <progress-stack>
+                <progress-bar value="35" color="Success" />
+                <progress-bar value="20" color="Warning" />
+                <progress-bar value="10" color="Danger" />
+            </progress-stack>
+        </box-body>
+        <!-- /.box-body -->
+    </box>
+    <!-- /.box -->
+
+    <box>
+        <box-header>
+            <box-title>Media object</box-title>
+        </box-header>
+        <box-body>
+            <row>
+                <column size-md="6">
+                    <media>
+                        <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                      height="64px" width="64px" />
+                        <media-body>
+                            <media-heading>Media heading</media-heading>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                            Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </media-body>
+                    </media>
+                </column>
+                <column size-md="6">
+                    <media>
+                        <media-body>
+                            <media-heading>Media heading</media-heading>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                            Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </media-body>
+                        <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                      height="64px" width="64px" align="Right" />
+                    </media>
+                </column>
+            </row>
+            <hr />
+            <row>
+                <column size-md="6">
+                    <media>
+                        <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                      height="64px" width="64px" />
+                        <media-body>
+                            <media-heading>Media heading</media-heading>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                            Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                            <media>
+                                <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                              height="64px" width="64px" />
+                                <media-body>
+                                    <media-heading>Media heading</media-heading>
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                                    Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                    Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                </media-body>
+                            </media>
+                        </media-body>
+                    </media>
+                </column>
+                <column size-md="6">
+                    <media>
+                        <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                      height="64px" width="64px" />
+                        <media-body>
+                            <media-heading>Media heading</media-heading>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                            Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </media-body>
+                        <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                      height="64px" width="64px" align="Right" />
+                    </media>
+                </column>
+            </row>
+            <hr />
+            <row>
+                <column size-md="6">
+                    <media>
+                        <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                      height="64px" width="64px" align="LeftTop" />
+                        <media-body>
+                            <media-heading>Media heading</media-heading>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                            <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        </media-body>
+                    </media>
+                    <media>
+                        <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                      height="64px" width="64px" align="LeftMiddle" />
+                        <media-body>
+                            <media-heading>Media heading</media-heading>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                            <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        </media-body>
+                    </media>
+                    <media>
+                        <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                      height="64px" width="64px" align="LeftBottom" />
+                        <media-body>
+                            <media-heading>Media heading</media-heading>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                            <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        </media-body>
+                    </media>
+                </column>
+                <column size-md="6">
+                    <media-list>
+                        <media>
+                            <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                          height="64px" width="64px" />
+                            <media-body>
+                                <media-heading>Media heading 1</media-heading>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                                Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </media-body>
+                        </media>
+                        <media>
+                            <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                          height="64px" width="64px" />
+                            <media-body>
+                                <media-heading>Media heading 2</media-heading>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                                Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </media-body>
+                        </media>
+                        <media>
+                            <media-object href="#" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjcyNDFlYmQwMSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2NzI0MWViZDAxIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzk2ODc1IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                                          height="64px" width="64px" />
+                            <media-body>
+                                <media-heading>Media heading 3</media-heading>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                                Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </media-body>
+                        </media>
+                    </media-list>
+                </column>
+            </row>
+        </box-body>
+    </box>
+
+    <box>
+        <box-header>
+            <box-title>List group</box-title>
+        </box-header>
+        <box-body>
+            <row>
+                <column size-md="4">
+                    <list-group>
+                        <list-group-item>
+                            Cras justo odio
+                        </list-group-item>
+                        <list-group-item>Dapibus ac facilisis in</list-group-item>
+                        <list-group-item>Morbi leo risus</list-group-item>
+                        <list-group-item>Porta ac consectetur ac</list-group-item>
+                        <list-group-item>Vestibulum at eros</list-group-item>
+                    </list-group>
+                </column>
+                <column size-md="4">
+                    <list-group>
+                        <list-group-item>Cras justo odio <badge>14</badge></list-group-item>
+                        <list-group-item>Dapibus ac facilisis in <badge>12</badge></list-group-item>
+                        <list-group-item>Morbi leo risus <badge>2</badge></list-group-item>
+                    </list-group>
+                </column>
+                <column size-md="4">
+                    <list-group>
+                        <list-group-link active="true">Cras justo odio</list-group-link>
+                        <list-group-link>Dapibus ac facilisis in</list-group-link>
+                        <list-group-link>Morbi leo risus</list-group-link>
+                        <list-group-link>Porta ac consectetur ac</list-group-link>
+                        <list-group-link disabled="true">Vestibulum at eros</list-group-link>
+                    </list-group>
+                </column>
+            </row>
+            <row>
+                <column size-md="4">
+                    <list-group>
+                        <list-group-button active="true">Cras justo odio</list-group-button>
+                        <list-group-button>Dapibus ac facilisis in</list-group-button>
+                        <list-group-button>Morbi leo risus</list-group-button>
+                        <list-group-button>Morbi leo risus</list-group-button>
+                        <list-group-button disabled="true">Vestibulum at eros</list-group-button>
+                    </list-group>
+                </column>
+                <column size-md="4">
+                    <list-group>
+                        <list-group-item status="Success">Dapibus ac facilisis in</list-group-item>
+                        <list-group-item status="Info">Cras sit amet nibh libero</list-group-item>
+                        <list-group-item status="Warning">Porta ac consectetur ac</list-group-item>
+                        <list-group-item status="Danger">Vestibulum at eros</list-group-item>
+                    </list-group>
+                </column>
+                <column size-md="4">
+                    <list-group>
+                        <list-group-link status="Success">Dapibus ac facilisis in</list-group-link>
+                        <list-group-link status="Info">Cras sit amet nibh libero</list-group-link>
+                        <list-group-link status="Warning">Porta ac consectetur ac</list-group-link>
+                        <list-group-link status="Danger">Vestibulum at eros</list-group-link>
+                    </list-group>
+                </column>
+            </row>
+            <row>
+                <column size-md="4">
+                    <list-group>
+                        <list-group-item active="true">
+                            <list-group-item-heading>List group item heading</list-group-item-heading>
+                            <list-group-item-text>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</list-group-item-text>
+                        </list-group-item>
+                        <list-group-item>
+                            <list-group-item-heading>List group item heading</list-group-item-heading>
+                            <list-group-item-text>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</list-group-item-text>
+                        </list-group-item>
+                        <list-group-item disabled="true">
+                            <list-group-item-heading>List group item heading</list-group-item-heading>
+                            <list-group-item-text>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</list-group-item-text>
+                        </list-group-item>
+                    </list-group>
+                </column>
+                <column size-md="4">
+                    <list-group>
+                        <list-group-link active="true">
+                            <list-group-item-heading>List group item heading</list-group-item-heading>
+                            <list-group-item-text>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</list-group-item-text>
+                        </list-group-link>
+                        <list-group-link>
+                            <list-group-item-heading>List group item heading</list-group-item-heading>
+                            <list-group-item-text>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</list-group-item-text>
+                        </list-group-link>
+                        <list-group-link disabled="true">
+                            <list-group-item-heading>List group item heading</list-group-item-heading>
+                            <list-group-item-text>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</list-group-item-text>
+                        </list-group-link>
+                    </list-group>
+                </column>
+
+            </row>
+        </box-body>
+    </box>
+
+    <box>
+        <box-header>
+            <box-title>Panels</box-title>
+        </box-header>
+        <box-body>
+            <panel state="Primary">
+                <panel-heading>Panel heading without title</panel-heading>
+                <panel-body>
+                    Basic panel example
+                </panel-body>
+                <panel-footer>Panel footer</panel-footer>
+            </panel>
+
+            <panel state="Primary">
+                <panel-heading>
+                    <panel-title>Panel title</panel-title>
+                </panel-heading>
+                <panel-body>
+                    Basic panel example
+                </panel-body>
+                <panel-footer>Panel footer</panel-footer>
+            </panel>
+
+            <panel state="Primary">
+                <panel-heading title="Panel title" />
+                <panel-body>
+                    Basic panel example
+                </panel-body>
+                <panel-footer>Panel footer</panel-footer>
+            </panel>
+
+            <panel state="Primary">
+                <panel-heading title="Panel title" />
+                <panel-body>
+                    Basic panel example
+                </panel-body>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </panel>
+
+            <panel state="Primary">
+                <panel-heading title="Panel title" />
+                <panel-body>
+                    Basic panel example
+                </panel-body>
+                <list-group>
+                    <list-group-link>
+                        <list-group-item-heading>List group item heading</list-group-item-heading>
+                        <list-group-item-text>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</list-group-item-text>
+                    </list-group-link>
+                    <list-group-link>
+                        <list-group-item-heading>List group item heading</list-group-item-heading>
+                        <list-group-item-text>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</list-group-item-text>
+                    </list-group-link>
+                    <list-group-link disabled="true">
+                        <list-group-item-heading>List group item heading</list-group-item-heading>
+                        <list-group-item-text>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</list-group-item-text>
+                    </list-group-link>
+                </list-group>
+            </panel>
+        </box-body>
+    </box>
+</content>
+
+<!-- /.content -->

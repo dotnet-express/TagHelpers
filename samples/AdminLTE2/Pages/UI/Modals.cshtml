@@ -1,0 +1,150 @@
+﻿@page
+@model ModalsModel
+@{
+    ViewData["Title"] = "Modals";
+}
+
+@section Styles {
+    <style>
+        .example-modal .modal {
+            position: relative;
+            top: auto;
+            bottom: auto;
+            right: auto;
+            left: auto;
+            display: block;
+            z-index: 1;
+        }
+
+        .example-modal .modal {
+            background: transparent !important;
+        }
+    </style>
+}
+
+@section Scripts {
+
+}
+
+<!-- Content Header (Page header) -->
+<content-header>
+    <content-header title="Modals" sub-title="Dialogs"></content-header>
+    <breadcrumb>
+        <breadcrumb-item href="#">Home</breadcrumb-item>
+        <breadcrumb-item href="#">UI</breadcrumb-item>
+        <breadcrumb-item href="#" active="true">Modals</breadcrumb-item>
+    </breadcrumb>
+</content-header>
+
+<!-- Main content -->
+<content>
+    <div class="callout callout-info">
+        <h4>Reminder!</h4>
+        Instructions for how to use modals are available on the
+        <a href="http://getbootstrap.com/javascript/#modals">Bootstrap documentation</a>
+    </div>
+
+    <row class="row">
+        <column size-md="12">
+            <box>
+                <box-header with-border="true">
+                    <box-title>Modal Examples</box-title>
+                </box-header>
+                <box-body>
+                    <btn-default data-toggle="modal" data-target="#modal-default">
+                        Launch Default Modal
+                    </btn-default>
+                    <btn-primary data-toggle="modal" data-target="#modal-primary">
+                        Launch Default Modal
+                    </btn-primary>
+                    <btn-success data-toggle="modal" data-target="#modal-success">
+                        Launch Success Modal
+                    </btn-success>
+                    <btn-info data-toggle="modal" data-target="#modal-info">
+                        Launch Info Modal
+                    </btn-info>
+                    <btn-danger data-toggle="modal" data-target="#modal-danger">
+                        Launch Danger Modal
+                    </btn-danger>
+                    <btn-warning data-toggle="modal" data-target="#modal-warning">
+                        Launch Warning Modal
+                    </btn-warning>
+                </box-body>
+            </box>
+        </column>
+    </row>
+
+    <modal-dialog id="modal-default" state="Default">
+        <modal-header title="Default Modal" />
+        <modal-body class="modal-body">
+            <p>One fine body&hellip;</p>
+        </modal-body>
+        <modal-footer class="modal-footer">
+            <btn-default data-dismiss="modal">Close</btn-default>
+            <btn-primary>Save changes</btn-primary>
+        </modal-footer>
+    </modal-dialog>
+    <!-- /.modal-dialog -->
+
+    <modal-dialog id="modal-primary" state="Primary">
+        <modal-header title="Primary Modal" />
+        <modal-body>
+            <p>One fine body&hellip;</p>
+        </modal-body>
+        <modal-footer>
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline">Save changes</button>
+        </modal-footer>
+    </modal-dialog>
+    <!-- /.modal-dialog -->
+
+    <modal-dialog id="modal-success" state="Success">
+        <modal-header title="Success Modal" />
+        <modal-body>
+            <p>One fine body&hellip;</p>
+        </modal-body>
+        <modal-footer>
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline">Save changes</button>
+        </modal-footer>
+    </modal-dialog>
+    <!-- /.modal-dialog -->
+
+    <modal-dialog id="modal-info" state="Info">
+        <modal-header title="Info Modal" />
+        <modal-body>
+            <p>One fine body&hellip;</p>
+        </modal-body>
+        <modal-footer>
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline">Save changes</button>
+        </modal-footer>
+    </modal-dialog>
+    <!-- /.modal-dialog -->
+
+    <modal-dialog id="modal-warning" state="Warning">
+        <modal-header title="Warning Modal" />
+        <modal-body>
+            <p>One fine body&hellip;</p>
+        </modal-body>
+        <modal-footer>
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline">Save changes</button>
+        </modal-footer>
+    </modal-dialog>
+    <!-- /.modal-dialog -->
+
+
+    <modal-dialog id="modal-danger" state="Danger">
+        <modal-header title="Danger Modal" />
+        <modal-body>
+            <p>One fine body&hellip;</p>
+        </modal-body>
+        <modal-footer>
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline">Save changes</button>
+        </modal-footer>
+    </modal-dialog>
+    <!-- /.modal-dialog -->
+</content>
+<!-- /.content -->
